@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>DeepAccess</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<!-- Home Page -->
+	<h1><i>DeepAccess</i></h1>
+	<form action="check.php" method="post">
+		<div ondrop="dropHandler(ev);" ondragover="dragOverHandler(ev);" id="drop_zone">
+			<textarea class="autoExpand" name="list"></textarea>
+		</div>
+		
+		<div id="settings" class="modal">
+			<div class="modal-content">
+				<div class="modal-body">
+					<span class="close">&times;</span>
+					<h4>Settings</h4>
+
+					<div id="config">
+						Agent: <input type="text" name="agent">
+					</div>
+
+					<div id="config">
+						<b>Proxy</b>: <input type="text" name="proxy">
+					</div>
+
+					<div id="config">
+						Regex: <input type="text" name="regex">
+					</div>
+					
+					<div id="config">
+						Token: <input type="text" name="token">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<input class="button" type="submit" value="Check">
+	</form>
+
+	<!-- About Section -->
+	<div id="about" class="modal">
+		<div class="modal-content">
+			<div class="modal-body">
+				<span class="close">&times;</span>
+				<p>DeepAccess is a search engine that allowed you deeply searching content that can only be accessed using specific contexts, Powered by PCRE including some other opensource libraries for this <b>Graphical Edition</b> such as <i>jQuery</i>.</p>
+				<h4>Credit</h4>
+				<ul>
+					<li><a title="Direct Mail" href="mailto:fray117@reset.ga">Fray117</a></li>
+					<li><a href="https://codepen.io/vsync/">Yair Even Or</a> (Auto Expanding Textarea)</li>
+				</ul>
+				<h4>Library Used</h4>
+				<ul>
+					<li><a href="https://www.pcre.org/">PCRE</a> (Perl Compatible Regular Expression)</li>
+					<li><a href="https://jquery.org/">jQuery</a></li>
+					<li><a href="https://secure.php.net/">PHP</a> <a href="https://curl.haxx.se/">CURL</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<div class="credit">Copyright (c) <span id="year"></span> System Exploiter Team</div>
+	<div class="footer"><!-- <a id="conf">Settings</a> - --> <a id="info">About</a></div>
+	
+	<!-- Script Loader -->
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
